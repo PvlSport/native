@@ -3,15 +3,17 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
-import { ItemService } from "./item/item.service";
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
-
+import { MenuComponent } from './menu/menu.component';
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 // Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
-// import { NativeScriptHttpModule } from "nativescript-angular/http";
+import { NativeScriptHttpModule } from "nativescript-angular/http";
+
+import { DishService } from './services/dish.service';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
+
+import { baseURL } from './shared/baseurl';
 
 @NgModule({
     bootstrap: [
@@ -19,15 +21,17 @@ import { ItemDetailComponent } from "./item/item-detail.component";
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NativeScriptHttpModule
     ],
     declarations: [
         AppComponent,
-        ItemsComponent,
-        ItemDetailComponent
+        MenuComponent
     ],
     providers: [
-        ItemService
+        {provide: 'BaseURL', useValue: baseURL},
+        DishService,
+        ProcessHTTPMsgService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
