@@ -11,6 +11,10 @@ refer to http://docs.nativescript.org/ui/theme.
 */
 @import 'nativescript-theme-core/css/purple.css';
 
+.fa {
+    font-family: FontAwesome, fontawesome-webfont;
+}
+
 .border {
   border-width: 1;
   border-color: #9f9f9f;
