@@ -21,6 +21,7 @@ import { NativeScriptUIListViewModule } from "nativescript-telerik-ui/listview/a
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { CouchbaseService } from './services/couchbase.service';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
@@ -62,7 +63,8 @@ import { baseURL } from './shared/baseurl';
         ProcessHTTPMsgService,
         PromotionService,
         LeaderService,
-        FavoriteService
+        FavoriteService,
+        CouchbaseService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
