@@ -10,6 +10,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ReservationModalComponent } from "./reservationmodal/reservationmodal.component";
+import { UserAuthComponent } from "./userauth/userauth.component"; 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -54,7 +55,8 @@ import { baseURL } from './shared/baseurl';
         HomeComponent,
         FavoritesComponent,
         ReservationComponent,
-        ReservationModalComponent
+        ReservationModalComponent,
+        UserAuthComponent 
     ],
     entryComponents: [ReservationModalComponent],
     providers: [
